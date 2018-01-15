@@ -1,8 +1,7 @@
 <template>
     <div :class="prefixCls">
-        <i-button></i-button>
         <div :class="sonClasss" v-for="s in data.son">
-            <p>{{s.icon}}</p>
+            <Icon :type="s.icon"></Icon>
             <p>{{s.text}}</p>
         </div>
     </div>
@@ -34,8 +33,6 @@
     $prefixCls: 'j_bottom_nav';
 
     .#{$prefixCls} {
-        position: fixed;
-        bottom: 0;
         display: flex;
         width: 100%;
         &-son {
